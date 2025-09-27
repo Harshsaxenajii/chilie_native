@@ -1,0 +1,103 @@
+{
+  "header": {
+    "dashboard": "Dashboard",
+    "search": "Search...",
+    "notifications": "Notifications",
+    "settings": "Settings",
+    "profile": "Profile",
+    "user": {
+      "name": "Alex Rodriguez",
+      "role": "Admin"
+    }
+  },
+  "sidebar": {
+    "dashboard": "Dashboard",
+    "applications": "Applications",
+    "reporters": "Reporters",
+    "monitoreo": "Monitoreo",
+    "automations": "Automations",
+    "chats IA": "Chats IA"
+  },
+  "dashboard": {
+    "welcome": "Welcome to your dashboard",
+    "totalUsers": "Total Users",
+    "totalRevenue": "Total Revenue",
+    "activeProjects": "Active Projects",
+    "conversion": "Conversions",
+    "recentActivity": "Recent Activity",
+    "pendingTask": "Pending Task",
+    "collaboratorIndicator": "Collaborator indicators",
+    "taskPerformed": "Tasks performed by the collaborator"
+  },
+  "pendingTask": {
+    "heading": "Global Risk",
+    "subHeading": "Risk by application"
+  },
+  "individualPendingTaskDetails": {
+    "heading1": "Control",
+    "heading2": "Hours of Risk"
+  },
+
+  "footer": {
+    "copyright": "© 2025 Andino Labs. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "save": "Save",
+    "cancel": "Cancel",
+    "edit": "Edit",
+    "delete": "Delete",
+    "view": "View",
+    "viewDetail": "View Details",
+    "pdf": "Export to PDF",
+    "sort": "Sort By",
+    "filter": "Filter",
+    "placeholder": "Look For..."
+  },
+  "language": {
+    "switchTo": "Switch to",
+    "english": "English (US)",
+    "spanish": "Spanish (Chile)"
+  },
+  "table": {
+    "heading": "Team members",
+    "heading2": "Active Users",
+    "collaboratorName": "Name of the collaborator",
+    "position": "Position he performs",
+    "range": "Range",
+    "risk": "Risk",
+    "date": "Date",
+    "task": "Task",
+    "state": "State",
+    "actions": "More actions"
+  },
+  "auth": {
+    "login": {
+      "user": "User",
+      "password": "Password",
+      "button": "Get into",
+      "forgotPass": "Forgot your password?"
+    },
+    "forgotPassword": {
+      "heading1": "To recover your password, enter your phone number.",
+      "heading2": "Enter the code you received via SMS on your phone",
+      "desc1": "You will receive an SMS with a code that you must enter.",
+      "desc2": "Check your SMS, and if you haven't received the code you can send it again.",
+      "cancel": "Cancel",
+      "accept": "To send",
+      "sendAgain": "Send code to my phone again",
+
+      "heading3": "Create your new password and make sure it's strong and easy to remember.",
+      "desc3": "It must be between 4 and 12 characters and you can use uppercase, lowercase and numbers.",
+      "newpassDesc": "Enter your new password",
+      "passAgin": "Enter your new password again",
+      "placeholder": "Enter your password",
+      "updated": "Password updated!",
+      "desc4": "Your password has been successfully changed, you can now log in.",
+      "navigateLogin": "Go to login"
+    }
+  }
+}

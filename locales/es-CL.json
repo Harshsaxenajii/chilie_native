@@ -1,0 +1,103 @@
+{
+  "header": {
+    "return": "Volver",
+    "search": "Buscar...",
+    "notifications": "Notificaciones",
+    "settings": "Configuración",
+    "profile": "Perfil",
+    "user": {
+      "name": "Alex Rodriguez",
+      "role": "Administrador"
+    }
+  },
+  "sidebar": {
+    "dashboard": "Panel de Control",
+    "applications": "aplicaciones",
+    "reporters": "reporteros",
+    "monitoreo": "monitoreo",
+    "automations": "automatizaciones",
+    "chats IA": "chats IA"
+  },
+  "dashboard": {
+    "welcome": "Bienvenido a tu panel de control",
+    "totalUsers": "Total de Usuarios",
+    "totalRevenue": "Ingresos Totales",
+    "activeProjects": "Proyectos Activos",
+    "conversion": "Conversiones",
+    "recentActivity": "Actividad Reciente",
+    "pendingTask": "Tareas pendientes",
+    "collaboratorIndicator": "Indicadores del colaborador",
+    "taskPerformed": "Tareas realizadas por el colaborador"
+  },
+  "pendingTask": {
+    "heading": "Riesgo Global",
+    "subHeading": "Riesgo por aplicación"
+  },
+  "individualPendingTaskDetails": {
+    "heading1": "Controles de riesgo",
+    "heading2": "Horas de riesgo"
+  },
+
+  "footer": {
+    "copyright": "© 2025 Andino Labs. Todos los derechos reservados.",
+    "privacy": "Política de Privacidad",
+    "terms": "Términos de Servicio"
+  },
+  "common": {
+    "placeholder": "Buscar",
+    "loading": "Cargando...",
+    "error": "Ocurrió un error",
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "edit": "Editar",
+    "delete": "Eliminar",
+    "view": "Ver",
+    "viewDetail": "Ver detalle",
+    "pdf": "Exportar a PDF",
+    "sort": "Ordenar por",
+    "filter": "Filtrar"
+  },
+  "language": {
+    "switchTo": "Cambiar a",
+    "english": "Inglés (EE.UU.)",
+    "spanish": "Español (Chile)"
+  },
+  "table": {
+    "heading": "Miembros del equipo",
+    "heading2": "Usuarios activos",
+    "collaboratorName": "nombre del colaborador",
+    "position": "Cargo que desempeña",
+    "range": "Rango",
+    "risk": "% de riesgo",
+    "date": "Fecha",
+    "task": "TAREA",
+    "state": "ESTADO",
+    "actions": "MÁS ACCIONES"
+  },
+  "auth": {
+    "login": {
+      "user": "Usuario",
+      "password": "Contraseña",
+      "button": "Ingresar",
+      "forgotPass": "¿Olvidaste la contraseña?"
+    },
+    "forgotPassword": {
+      "heading": "Para recuperar tu contraseña ingresa tu número de teléfono",
+      "desc1": "Recibirás un SMS con un código que deberás ingresar",
+      "heading2": "Ingresa el código que recibiste por SMS en tu teléfono",
+      "desc2": "Revisa tus SMS, y si no has recibido el código puedes volver a enviarlo",
+      "cancel": "Cancelar",
+      "accept": "Enviar",
+      "sendAgain": "Volver a envía código a mi teléfono",
+
+      "heading3": "Crea tu nueva contraseñas y asegúrate de que sea segura y fácil de recordar.",
+      "desc3": "Debe tener entre 4 y 12 caracteress y puedes utilizar mayúsculas, minúsculas y números",
+      "newpassDesc": "Ingresa tu nueva contraseña",
+      "passAgin": "Ingresa nuevamente tu nueva contraseña",
+      "placeholder": "Ingresa tu contraseña",
+      "updated": "¡Contraseña actualizada!",
+      "desc4": "Tu contraseña se ha cambiado correctamente, ya puedes iniciar sesión",
+      "navigateLogin": "Ir a iniciar sesión"
+    }
+  }
+}
