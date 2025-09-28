@@ -1,13 +1,11 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
-import en from "./locales/en.json";
-import hi from "./locales/hi.json";
-import te from "./locales/te.json";
+import enUS from "./locales/en-US.json";
+import enCL from "./locales/es-CL.json";
 
 const resources = {
-  en: { translation: en },
-  hi: { translation: hi },
-  te: { translation: te },
+  "en-US": { translation: enUS },
+  "en-CL": { translation: enCL },
 };
 
 const languageDetector = {
@@ -16,11 +14,11 @@ const languageDetector = {
   detect: (callback) => {
     if (typeof navigator !== "undefined" && navigator.language) {
       const userLang = navigator.language || navigator.userLanguage;
-      const bestLanguage = userLang.startsWith("hi") ? "hi" : "en";
+      const bestLanguage = userLang === "en-CL" ? "en-CL" : "en-US";
       callback(bestLanguage);
     } else {
       // Default language if navigator is not available
-      callback("en");
+      callback("en-US");
     }
   },
   init: () => {},
@@ -32,7 +30,7 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
-    fallbackLng: "en",
+    fallbackLng: "en-US",
     interpolation: {
       escapeValue: false,
     },

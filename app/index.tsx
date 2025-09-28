@@ -1,9 +1,17 @@
+import i18n from "@/i18n";
 import { useRouter } from "expo-router";
-import React from "react";
+import React, { useEffect } from "react";
 import { Pressable, Text, View } from "react-native";
 
 const index = () => {
   const router = useRouter();
+  const selectEn = () => {
+    i18n.changeLanguage("en");
+  };
+
+  useEffect(() => {
+    selectEn();
+  }, []);
   return (
     <View className="flex-1 items-center justify-center h-500 bg-red-300">
       <Text>Main Screen</Text>
