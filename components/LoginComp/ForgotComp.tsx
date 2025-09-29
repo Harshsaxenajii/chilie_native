@@ -14,10 +14,10 @@ const ForgotComp: React.FC<ForgotCompProps> = ({ navigate }) => {
   const { t } = useTranslation();
 
   return (
-    <View className="px-5 w-full">
+    <View className="w-full">
       {step === 1 && (
         <View className=" gap-4 ">
-          <Text className="text-base text-black mt-3 ">
+          <Text className="text-base text-black mt-3 text-center">
             {t(`auth.forgotPassword.heading1`)}
           </Text>
 
@@ -28,7 +28,7 @@ const ForgotComp: React.FC<ForgotCompProps> = ({ navigate }) => {
             <Input keyboardType="numeric" style={{ flex: 1 }} placeholder="" />
           </View>
 
-          <Text className="text-base text-black leading-6 w-full">
+          <Text className="text-base text-black leading-6 w-full text-center">
             {t(`auth.forgotPassword.desc1`)}
           </Text>
 
@@ -50,7 +50,7 @@ const ForgotComp: React.FC<ForgotCompProps> = ({ navigate }) => {
 
       {step === 2 && (
         <View className=" gap-4">
-          <Text className="text-base text-black mt-3 w-full">
+          <Text className="text-base text-black mt-3 w-full text-center">
             {t(`auth.forgotPassword.heading2`)}
           </Text>
 
@@ -71,11 +71,11 @@ const ForgotComp: React.FC<ForgotCompProps> = ({ navigate }) => {
             />
           </View>
 
-          <Text className="text-base text-black leading-6 sm:mt-0 mt-10">
+          <Text className="text-sm text-black leading-6 sm:mt-0 mt-10 text-center">
             {t(`auth.forgotPassword.desc2`)}
           </Text>
 
-          <TouchableOpacity className="self-start -mt-3">
+          <TouchableOpacity className="self-center mt-2">
             <Text className="text-md text-[#3B3B3B] underline">Send Again</Text>
           </TouchableOpacity>
         </View>
@@ -83,11 +83,11 @@ const ForgotComp: React.FC<ForgotCompProps> = ({ navigate }) => {
 
       {step === 3 && (
         <View className=" gap-4">
-          <Text className="text-base text-black">
+          <Text className="text-[14px] text-black text-center">
             {t(`auth.forgotPassword.heading3`)}
           </Text>
 
-          <Text className="text-base text-black leading-6">
+          <Text className="text-base text-black text-[14px] text-center leading-6 mx-2">
             {t(`auth.forgotPassword.desc3`)}
           </Text>
 
@@ -114,7 +114,7 @@ const ForgotComp: React.FC<ForgotCompProps> = ({ navigate }) => {
             />
           </View>
 
-          <View className="flex-row gap-4 justify-center items-end">
+          <View className="flex-row gap-4 justify-center items-end mt-1">
             <Button variant="outline" title={t(`auth.forgotPassword.cancel`)} />
             <Button
               onPress={() => setStep((prev) => prev + 1)}
@@ -126,15 +126,15 @@ const ForgotComp: React.FC<ForgotCompProps> = ({ navigate }) => {
 
       {step === 4 && (
         <View className=" gap-4">
-          <Text className="text-base font-medium text-black text-center">
+          <Text className="text-[16px] font-semibold text-black text-center">
             {t(`auth.forgotPassword.updated`)}
           </Text>
 
-          <Text className="text-center text-sm text-black leading-6">
+          <Text className="text-center text-[16px] text-black leading-6 my-2">
             {t(`auth.forgotPassword.desc4`)}
           </Text>
 
-          <View className="items-center">
+          <View className="items-center mt-2">
             <Button
               onPress={() => navigate("/auth/login")}
               title={t(`auth.forgotPassword.navigateLogin`)}

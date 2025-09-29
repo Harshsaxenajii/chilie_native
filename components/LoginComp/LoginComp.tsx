@@ -27,7 +27,9 @@ const LoginComp: React.FC<LoginCompProps> = ({
     <View className=" px-5 w-full">
       {/* Username */}
       <View className="flex flex-col gap-1 mb-4">
-        <Text className="text-gray-700 font-medium">{t(`auth.login.user`)}</Text>
+        <Text className="text-gray-700 text-[14px]">
+          {t(`auth.login.user`)}
+        </Text>
         <Input
           placeholder="Enter your username"
           value={username}
@@ -37,7 +39,9 @@ const LoginComp: React.FC<LoginCompProps> = ({
 
       {/* Password */}
       <View className="flex flex-col gap-1 mb-4">
-        <Text className="text-gray-700 font-medium">{t(`auth.login.password`)}</Text>
+        <Text className="text-gray-700 text-[14px]">
+          {t(`auth.login.password`)}
+        </Text>
         <Input
           placeholder="Enter your password"
           value={password}
@@ -56,7 +60,7 @@ const LoginComp: React.FC<LoginCompProps> = ({
 
         {onForgotPassword && (
           <Text
-            className="text-md mt-4 text-[#3B3B3B]"
+            className="text-[12px] mt-4 text-[#3B3B3B]"
             onPress={onForgotPassword}
           >
             {t(`auth.login.forgotPass`)}

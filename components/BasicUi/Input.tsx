@@ -14,9 +14,9 @@ const Input = forwardRef<TextInput, InputProps>(
         className={className} 
         style={[
           {
-            height: 40,
+            height: 30,
             paddingHorizontal: 10,
-            borderRadius: 8,
+            borderRadius: 4,
             borderWidth: 1,
             borderColor: "#ccc",
           },
