@@ -2,7 +2,7 @@ import React, { forwardRef } from "react";
 import { StyleProp, TextInput, TextInputProps, TextStyle } from "react-native";
 
 export interface InputProps extends TextInputProps {
-  className?: string; 
+  className?: string;
   style?: StyleProp<TextStyle>;
 }
 
@@ -11,16 +11,16 @@ const Input = forwardRef<TextInput, InputProps>(
     return (
       <TextInput
         ref={ref}
-        className={className} 
+        className={className}
         style={[
           {
-            height: 40,
+            height: 35,
             paddingHorizontal: 10,
-            borderRadius: 8,
+            borderRadius: 4,
             borderWidth: 1,
             borderColor: "#ccc",
           },
-          style, 
+          style,
         ]}
         {...props}
       />

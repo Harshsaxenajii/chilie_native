@@ -13,7 +13,7 @@ export interface ButtonProps extends TouchableOpacityProps {
   children?: React.ReactNode;
   title?: string;
   className?: string;
-  textClassName?: string; 
+  textClassName?: string;
 }
 
 const Button = React.forwardRef<
@@ -40,7 +40,7 @@ const Button = React.forwardRef<
         flexDirection: "row",
         alignItems: "center",
         justifyContent: "center",
-        borderRadius: 8,
+        borderRadius: 4,
         opacity: disabled ? 0.5 : 1,
       };
 
@@ -139,7 +139,7 @@ const Button = React.forwardRef<
         disabled={disabled}
         activeOpacity={0.95}
         {...props}
-        className={className} 
+        className={className}
       >
         {children ? (
           children
