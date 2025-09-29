@@ -82,9 +82,9 @@
       "forgotPass": "¿Olvidaste la contraseña?"
     },
     "forgotPassword": {
-      "heading": "Para recuperar tu contraseña ingresa tu número de teléfono",
-      "desc1": "Recibirás un SMS con un código que deberás ingresar",
+      "heading1": "Para recuperar tu contraseña ingresa tu número de teléfono",
       "heading2": "Ingresa el código que recibiste por SMS en tu teléfono",
+      "desc1": "Recibirás un SMS con un código que deberás ingresar",
       "desc2": "Revisa tus SMS, y si no has recibido el código puedes volver a enviarlo",
       "cancel": "Cancelar",
       "accept": "Enviar",

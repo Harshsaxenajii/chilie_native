@@ -12,8 +12,8 @@ export interface ButtonProps extends TouchableOpacityProps {
   size?: "default" | "sm" | "lg" | "icon";
   children?: React.ReactNode;
   title?: string;
-  className?: string; // for css-interop
-  textClassName?: string; // for css-interop
+  className?: string;
+  textClassName?: string; 
 }
 
 const Button = React.forwardRef<
@@ -139,7 +139,7 @@ const Button = React.forwardRef<
         disabled={disabled}
         activeOpacity={0.95}
         {...props}
-        className={className} // ✅ pass className for css-interop
+        className={className} 
       >
         {children ? (
           children

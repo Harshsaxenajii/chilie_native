@@ -126,11 +126,11 @@ const ForgotComp: React.FC<ForgotCompProps> = ({ navigate }) => {
 
       {step === 4 && (
         <View className=" gap-4">
-          <Text className="text-base font-medium text-black">
+          <Text className="text-base font-medium text-black text-center">
             {t(`auth.forgotPassword.updated`)}
           </Text>
 
-          <Text className="text-base text-black leading-6">
+          <Text className="text-center text-sm text-black leading-6">
             {t(`auth.forgotPassword.desc4`)}
           </Text>
 

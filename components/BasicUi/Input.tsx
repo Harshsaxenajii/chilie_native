@@ -2,7 +2,7 @@ import React, { forwardRef } from "react";
 import { StyleProp, TextInput, TextInputProps, TextStyle } from "react-native";
 
 export interface InputProps extends TextInputProps {
-  className?: string; // ✅ for NativeWind / CSS interop
+  className?: string; 
   style?: StyleProp<TextStyle>;
 }
 

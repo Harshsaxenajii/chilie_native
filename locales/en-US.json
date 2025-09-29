@@ -82,7 +82,7 @@
       "forgotPass": "Forgot your password?"
     },
     "forgotPassword": {
-      "heading1": "To recover your password, enter your phone number.",
+      "heading1": "To recover your password, enter your phone number.", 
       "heading2": "Enter the code you received via SMS on your phone",
       "desc1": "You will receive an SMS with a code that you must enter.",
       "desc2": "Check your SMS, and if you haven't received the code you can send it again.",

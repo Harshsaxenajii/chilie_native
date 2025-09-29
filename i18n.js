@@ -17,7 +17,6 @@ const languageDetector = {
       const bestLanguage = userLang === "en-CL" ? "en-CL" : "en-US";
       callback(bestLanguage);
     } else {
-      // Default language if navigator is not available
       callback("en-US");
     }
   },
@@ -30,7 +29,7 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
-    fallbackLng: "en-US",
+    fallbackLng: "en-CL",
     interpolation: {
       escapeValue: false,
     },

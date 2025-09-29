@@ -1,8 +1,8 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { Text, View } from "react-native";
-import Button from "../BasicUi/Button"; // ✅ default import
-import Input from "../BasicUi/Input"; // ✅ default import
+import Button from "../BasicUi/Button";
+import Input from "../BasicUi/Input";
 
 interface LoginCompProps {
   username: string;

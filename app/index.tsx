@@ -6,7 +6,7 @@ import { Pressable, Text, View } from "react-native";
 const index = () => {
   const router = useRouter();
   const selectEn = () => {
-    i18n.changeLanguage("en");
+    i18n.changeLanguage("en-CL");
   };
 
   useEffect(() => {
@@ -16,6 +16,7 @@ const index = () => {
     <View className="flex-1 items-center justify-center h-500 bg-red-300">
       <Text>Main Screen</Text>
       <Text>Just left this screen for first authentication start page</Text>
+      <Text className="text-black">Test Text</Text>
 
       <Pressable
         onPress={() => router.push("/auth/login")}
