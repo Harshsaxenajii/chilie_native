@@ -26,7 +26,7 @@ const Login = () => {
   };
 
   return (
-    <View className="flex-1 justify-center items-center bg-transparent px-4">
+    <View className="flex-1 justify-center items-center bg-white px-4">
       <View className="flex flex-col max-w-[280px]  w-full gap-6 justify-center items-center -mt-20">
         <Image
           source={require("@/assets/icons/logo.png")}
