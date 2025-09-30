@@ -24,7 +24,6 @@ const LoginComp: React.FC<LoginCompProps> = ({
 }) => {
   const { t } = useTranslation();
   const router = useRouter();
-
   return (
     <View className=" px-5 w-full">
       {/* Username */}
@@ -56,8 +55,8 @@ const LoginComp: React.FC<LoginCompProps> = ({
       <View className="flex flex-col items-center mt-2">
         <Button
           variant="default"
-          onPress={() => router.push("/dashboard")}
-          title={t(`auth.login.button`)} // ✅ only use title for text
+          onPress={() => router.push("/authenticated/dashboard")}
+          title={t(`auth.login.button`)}
         />
 
         {onForgotPassword && (

@@ -1,5 +1,4 @@
 import { CardData } from "@/types/dashboard.types";
-import { ArrowDown, ArrowRight, ArrowUp } from "lucide-react";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { FlatList, Image, Text, TouchableOpacity, View } from "react-native";
@@ -47,7 +46,6 @@ export const StatsCard = ({
         justifyContent: "space-between",
       }}
     >
-      {/* Title */}
       <View
         style={{ flexDirection: "row", alignItems: "center", marginBottom: 12 }}
       >
@@ -64,7 +62,6 @@ export const StatsCard = ({
         </View>
       </View>
 
-      {/* Percentage and trend */}
       <View
         style={{
           flexDirection: "row",
@@ -77,9 +74,19 @@ export const StatsCard = ({
           style={{ flexDirection: "row", alignItems: "center", marginLeft: 8 }}
         >
           {trend === "up" ? (
-            <ArrowUp size={18} color="green" />
+            <Image
+              source={require("@/assets/icons/ui/right-arrow.png")}
+              className="rotate-90"
+              style={{ width: 12, height: 12 }}
+              resizeMode="contain"
+            />
           ) : (
-            <ArrowDown size={18} color="red" />
+            <Image
+              source={require("@/assets/icons/ui/right-arrow.png")}
+              className="-rotate-90"
+              style={{ width: 12, height: 12 }}
+              resizeMode="contain"
+            />
           )}
           <Text style={{ fontSize: 14, fontWeight: "600", marginLeft: 4 }}>
             {value}
@@ -87,12 +94,10 @@ export const StatsCard = ({
         </View>
       </View>
 
-      {/* Description */}
       <Text style={{ fontSize: 14, color: "#6b7280", marginBottom: 12 }}>
         {description}
       </Text>
 
-      {/* Footer */}
       <TouchableOpacity
         style={{
           borderTopWidth: 1,
@@ -113,7 +118,11 @@ export const StatsCard = ({
         >
           {t("common.viewDetail")}
         </Text>
-        <ArrowRight size={18} color="black" />
+        <Image
+          source={require("@/assets/icons/dashboard/right-arrow.png")}
+          style={{ width: 18, height: 18 }}
+          resizeMode="contain"
+        />
       </TouchableOpacity>
     </View>
   );

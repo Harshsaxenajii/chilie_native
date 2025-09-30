@@ -1,10 +1,8 @@
-import type { CardData } from "@/types/dashboard.types";
-import { View } from "react-native";
-// export { TeamPerformance } from "./TeamPerformance";
-
 import DashboardHeader from "@/components/DashboardComp/DashboardHeader";
 import { StatsGrid } from "@/components/DashboardComp/StatsGrid";
+import { CardData } from "@/types/dashboard.types";
 import React from "react";
+import { View } from "react-native";
 
 const cards: CardData[] = [
   {

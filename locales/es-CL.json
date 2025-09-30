@@ -5,6 +5,7 @@
     "notifications": "Notificaciones",
     "settings": "Configuración",
     "profile": "Perfil",
+    "dashboard": "Panel de Control",
     "user": {
       "name": "Alex Rodriguez",
       "role": "Administrador"
@@ -37,7 +38,6 @@
     "heading1": "Controles de riesgo",
     "heading2": "Horas de riesgo"
   },
-
   "footer": {
     "copyright": "© 2025 Andino Labs. Todos los derechos reservados.",
     "privacy": "Política de Privacidad",
@@ -89,7 +89,6 @@
       "cancel": "Cancelar",
       "accept": "Enviar",
       "sendAgain": "Volver a envía código a mi teléfono",
-
       "heading3": "Crea tu nueva contraseñas y asegúrate de que sea segura y fácil de recordar.",
       "desc3": "Debe tener entre 4 y 12 caracteress y puedes utilizar mayúsculas, minúsculas y números",
       "newpassDesc": "Ingresa tu nueva contraseña",

@@ -1,12 +1,14 @@
-import { usePathname } from "expo-router";
-import { useTranslation } from "react-i18next";
-import { Image, ScrollView, Text, TouchableOpacity, View } from "react-native";
+"use client"
+
+import { usePathname } from "expo-router"
+import { useTranslation } from "react-i18next"
+import { Image, ScrollView, Text, TouchableOpacity, View } from "react-native"
 
 interface SidebarProps {
-  collapsed: boolean;
-  onToggle: () => void;
-  mobileTitle?: string;
-  isMobile?: boolean;
+  collapsed: boolean
+  onToggle: () => void
+  mobileTitle?: string
+  isMobile?: boolean
 }
 
 const menuItems = [
@@ -16,22 +18,18 @@ const menuItems = [
   { labelKey: "monitoreo", path: "/monitoreo" },
   { labelKey: "automatizaciones", path: "/automatizaciones" },
   { labelKey: "chats IA", path: "/chats" },
-];
+]
 
-export function Sidebar({ collapsed, onToggle, isMobile }: SidebarProps) {
-  const { t } = useTranslation();
-  const pathname = usePathname();
+export const Sidebar = ({ collapsed, onToggle, isMobile }: SidebarProps) => {
+  const { t } = useTranslation()
+  const pathname = usePathname()
 
   return (
-    <View
-      className={`bg-white text-black flex flex-col-reverse lg:flex-col h-full ${
-        collapsed ? "w-[236px]" : "lg:w-[236px] w-screen"
-      }`}
-    >
-      {/* Logo Section - Desktop */}
-      <View className="h-20 hidden lg:flex flex-row items-center justify-center border-b border-white/10">
-        <View className="flex flex-row w-full items-center justify-between">
-          <View />
+    <View className={`bg-white text-black flex flex-col h-full ${collapsed ? "w-[236px]" : "lg:w-[236px] w-full"}`}>
+      {/* Logo Section - Desktop Only */}
+      <View className="h-20 hidden lg:flex flex-row items-center justify-center border-b border-gray-200">
+        <View className="flex flex-row w-full items-center justify-between px-4">
+          <View className="w-[18px]" />
           <View className="flex items-center">
             <Image
               source={require("@/assets/icons/sidebar/sidebar.png")}
@@ -39,11 +37,7 @@ export function Sidebar({ collapsed, onToggle, isMobile }: SidebarProps) {
               resizeMode="contain"
             />
           </View>
-          <TouchableOpacity
-            onPress={onToggle}
-            className="pr-3"
-            activeOpacity={0.7}
-          >
+          <TouchableOpacity onPress={onToggle} className="p-2" activeOpacity={0.7}>
             <Image
               source={require("@/assets/icons/sidebar/left-arrow.png")}
               style={{ width: 18, height: 15 }}
@@ -55,54 +49,44 @@ export function Sidebar({ collapsed, onToggle, isMobile }: SidebarProps) {
 
       {/* Navigation */}
       <ScrollView
-        className="flex-1 px-8 pt-3 xl:border-t border-gray-200"
+        className="flex-1 lg:px-4 px-6 pt-6 lg:pt-4"
         showsVerticalScrollIndicator={false}
+        contentContainerStyle={{ paddingBottom: 16 }}
       >
-        <Text className="xl:px-8 mb-3 xl:mb-5 ml-5 font-semibold">GENERAL</Text>
-        <View className="space-y-5">
+        <Text className="lg:px-4 px-0 mb-4 lg:mb-5 text-xs font-semibold text-gray-600 tracking-wide">GENERAL</Text>
+        <View className="lg:space-y-1 space-y-0">
           {menuItems.map((item, index) => {
-            const isActive = pathname === item.path;
+            const isActive = pathname === item.path
             return (
               <View
-                className={` xl:border-0 pb-2 xl:pb-0 ${
-                  index !== menuItems.length - 1
-                    ? "border-b border-gray-200"
-                    : ""
-                }`}
+                className={`lg:border-0 ${index !== menuItems.length - 1 ? "border-b border-gray-200" : ""}`}
                 key={index}
               >
-                <View>
-                  <TouchableOpacity
-                    className={`w-full flex items-center px-0 xl:px-8 ${
-                      isActive ? "font-light" : "text-xs"
+                <TouchableOpacity
+                  className={`w-full flex items-start lg:px-4 px-0 py-4 lg:py-3 lg:rounded-lg ${
+                    isActive ? "lg:bg-gray-100" : ""
+                  }`}
+                  activeOpacity={0.7}
+                >
+                  <Text
+                    className={`text-base lg:text-sm capitalize ${
+                      isActive ? "font-bold lg:font-semibold text-black" : "font-medium text-gray-700"
                     }`}
-                    activeOpacity={0.7}
                   >
-                    <Text
-                      className={`text-sm capitalize ${
-                        isActive ? "font-bold text-lg" : "font-medium text-base"
-                      }`}
-                    >
-                      {item.labelKey}
-                    </Text>
-                  </TouchableOpacity>
-                </View>
+                    {item.labelKey}
+                  </Text>
+                </TouchableOpacity>
               </View>
-            );
+            )
           })}
         </View>
       </ScrollView>
 
       {/* Bottom Logo Section */}
-      <View className="pb-4 xl:pr-0 pr-6 xl:py-4 py-6 flex flex-row items-center justify-between lg:justify-center">
-        <View className="block lg:hidden" />
-        <Image
-          source={require("@/assets/icons/logo.png")}
-          style={{ width: 138, height: 35 }}
-          resizeMode="contain"
-        />
+      <View className="border-t border-gray-200 lg:border-0 px-6 lg:px-4 py-5 lg:py-4 flex flex-row items-center justify-between lg:justify-center">
+        <Image source={require("@/assets/icons/logo.png")} style={{ width: 138, height: 35 }} resizeMode="contain" />
         {isMobile && (
-          <TouchableOpacity onPress={onToggle} activeOpacity={0.7}>
+          <TouchableOpacity onPress={onToggle} className="p-2 -mr-2" activeOpacity={0.7}>
             <Image
               source={require("@/assets/icons/dashboard/cross.png")}
               style={{ width: 19, height: 19 }}
@@ -112,5 +96,5 @@ export function Sidebar({ collapsed, onToggle, isMobile }: SidebarProps) {
         )}
       </View>
     </View>
-  );
+  )
 }

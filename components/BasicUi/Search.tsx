@@ -1,6 +1,5 @@
-import { Search } from "lucide-react";
 import React from "react";
-import { StyleSheet, TextInput, View } from "react-native";
+import { Image, StyleSheet, TextInput, View } from "react-native";
 
 interface SearchBoxProps {
   searchName: string;
@@ -16,9 +15,15 @@ export const SearchBox: React.FC<SearchBoxProps> = ({
   return (
     <View style={styles.container}>
       <View style={styles.iconContainer}>
-        <Search size={18} color="black" />
+        {/* <Search size={18} color="black" /> */}
+        <Image
+          source={require("@/assets/icons/dashboard/search.png")}
+          className="mt-[3px]"
+          style={{ width: 15, height: 15 }}
+        ></Image>
       </View>
       <TextInput
+      className="text-sm"
         value={searchName.trim()}
         onChangeText={(text) => setSearchName(text)}
         placeholder={placeholder}
@@ -40,14 +45,14 @@ const styles = StyleSheet.create({
     position: "absolute",
     left: 12,
     top: "50%",
-    transform: [{ translateY: -10 }], // centers the icon vertically
+    transform: [{ translateY: -10 }],
     pointerEvents: "none",
   },
   input: {
-    height: 32,
+    height: 37,
     paddingLeft: 36,
     paddingRight: 16,
-    fontSize: 14,
+    fontSize: 12,
     borderWidth: 1,
     borderColor: "#ccc",
     borderRadius: 40,
