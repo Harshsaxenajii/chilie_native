@@ -14,7 +14,7 @@ const Login = () => {
   const { t } = useTranslation();
 
   const handleLogin = () => {
-    router.push("/(authenticated)/dashboard");
+    router.push("/dashboard");
   };
 
   const handleForgotClick = () => {

@@ -1,3 +1,4 @@
+import { useRouter } from "expo-router";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { Text, View } from "react-native";
@@ -22,6 +23,7 @@ const LoginComp: React.FC<LoginCompProps> = ({
   onForgotPassword,
 }) => {
   const { t } = useTranslation();
+  const router = useRouter();
 
   return (
     <View className=" px-5 w-full">
@@ -54,7 +56,7 @@ const LoginComp: React.FC<LoginCompProps> = ({
       <View className="flex flex-col items-center mt-2">
         <Button
           variant="default"
-          onPress={handleLogin}
+          onPress={() => router.push("/dashboard")}
           title={t(`auth.login.button`)} // ✅ only use title for text
         />
 

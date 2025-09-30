@@ -15,7 +15,7 @@ const index = () => {
   return (
     <View className="flex-1 items-center justify-center h-500 bg-red-300">
       <Text>Main Screen</Text>
-      <Text>Just left this screen for first authentication start page</Text>
+      <Text>Reserved for splash screen</Text>
       <Text className="text-black">Test Text</Text>
 
       <Pressable
