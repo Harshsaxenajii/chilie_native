@@ -12,7 +12,7 @@ const DashboardHeader = () => {
   const [searchName, setSearchName] = useState(" ");
 
   return (
-    <View className="flex flex-row justify-between w-[1090px] py-2 pl-4">
+    <View className="flex flex-row justify-between py-2 pl-4">
       <Text className="mb-3 text-lg font-bold">{t(`header.dashboard`)}</Text>
       <View className="w-1/2 items-end">
         <SearchBox

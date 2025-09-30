@@ -14,11 +14,7 @@ const Login = () => {
   const { t } = useTranslation();
 
   const handleLogin = () => {
-    if (username.trim()) {
-      router.push("/");
-    } else {
-      alert(t("login.enterUsername"));
-    }
+    router.push("/(authenticated)/dashboard");
   };
 
   const handleForgotClick = () => {

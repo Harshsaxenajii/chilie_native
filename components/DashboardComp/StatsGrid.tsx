@@ -2,7 +2,8 @@ import { CardData } from "@/types/dashboard.types";
 import { ArrowDown, ArrowRight, ArrowUp } from "lucide-react";
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { FlatList, Text, TouchableOpacity, View } from "react-native";
+import { FlatList, Image, Text, TouchableOpacity, View } from "react-native";
+import { Tooltip } from "../Ui/ToolTip";
 
 interface StatsGridProps {
   cards: CardData[];
@@ -29,6 +30,7 @@ export const StatsCard = ({
   percentage,
   value,
   trend,
+  tooltip,
   description,
 }: CardData) => {
   const { t } = useTranslation();
@@ -40,13 +42,9 @@ export const StatsCard = ({
         borderRadius: 4,
         paddingVertical: 16,
         paddingHorizontal: 20,
-        width: 260,
-        minHeight: 160,
+        width: 285,
+        minHeight: 165,
         justifyContent: "space-between",
-        // shadowColor: "#000",
-        // shadowOpacity: 0.1,
-        // shadowRadius: 3,
-        // elevation: 2,
       }}
     >
       {/* Title */}
@@ -54,6 +52,16 @@ export const StatsCard = ({
         style={{ flexDirection: "row", alignItems: "center", marginBottom: 12 }}
       >
         <Text style={{ fontSize: 16, fontWeight: "600" }}>{name}</Text>
+        <View style={{ overflow: "visible", zIndex: 1000 }}>
+          <Tooltip className="" text={tooltip}>
+            <Image
+              className="mx-4"
+              source={require("@/assets/icons/dashboard/tooltip.png")}
+              style={{ width: 20, height: 20 }}
+              alt=""
+            />
+          </Tooltip>
+        </View>
       </View>
 
       {/* Percentage and trend */}

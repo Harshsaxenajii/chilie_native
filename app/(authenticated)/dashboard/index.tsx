@@ -43,7 +43,7 @@ const cards: CardData[] = [
 
 const index = () => {
   return (
-    <View className="bg-[#f2f2f2] flex-1 ">
+    <View className="bg-[#f2f2f2]">
       <DashboardHeader />
       <StatsGrid cards={cards} />
       {/* <TeamPerformance /> */}
